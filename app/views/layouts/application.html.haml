@@ -8,4 +8,41 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    = yield
+    .website
+      %header.header
+        .navbar{:role => "navigation", :"aria-label" => "main navigation"}
+          .navbar-brand
+            %h1.tite.is-1
+              = link_to "deRAPando", root_path, class: "navbar-item"
+          .navbar-menu
+            .navbar-start
+              = link_to "Freestylers", root_path, class: "navbar-item"
+              = link_to "Ligas",  root_path, class: "navbar-item"
+              .navbar-item.has-dropdown.is-hoverable
+                %a{ :href => "#", :title => "Lo más reciente", :class => "navbar-link" } 
+                  %span
+                    Reciente
+                .navbar-dropdown
+                  %a{ :href => "#", :title => "Lo más reciente", :class => "navbar-item" } 
+                    %span
+                      Freestylers
+                  %a{ :href => "#", :title => "Lo más reciente", :class => "navbar-item" } 
+                    %span
+                      Videos
+
+          .navbar-end
+            .navbar-item
+              .buttons
+                %a{ :href => "/users/sign_in", :title => "Ingresar", :class => "button is-light" } 
+                  %span
+                    Ingresar
+                    = fa_icon "user"
+                %a{ :href => "/users/sign_up", :title => "Crear cuenta", :class => "button is-light" } 
+                  %span
+                    Crear cuenta
+          
+        
+      .content
+        = yield
+        
+      %footer.footer

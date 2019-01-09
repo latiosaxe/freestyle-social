@@ -1,0 +1,19 @@
+.user-section
+  .container
+    .hero
+      .hero-body
+        .columns
+          .column.is-4.is-offset-8.white_bg
+            %h2.title.is-3 ¿Olvidaste tu contraseña?
+            = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+              = devise_error_messages!
+              .field
+                = f.label "Correo electrónico", class: "label"
+                .control
+                  = f.email_field :email, autofocus: true, autocomplete: "off", class: "input"
+
+              .has-text-right
+                = f.submit "Recordar contraseña", class: "button is-primary"
+
+            .has-text-centered.margin-top-20
+              = render "devise/shared/links"

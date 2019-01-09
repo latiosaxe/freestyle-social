@@ -1,3 +1,15 @@
-// Place all the styles related to the Main controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'variables';
+$main-font: 'Thasadith', sans-serif;
+$title-font: 'Indie Flower', cursive;
+
+body{
+    font-family: $main-font;
+}
+
+.title{
+    font-family: $title-font;
+}
+
+.website{
+    margin-top: $headerHeight;
+}

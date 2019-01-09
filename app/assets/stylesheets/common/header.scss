@@ -1,0 +1,31 @@
+@import 'variables';
+
+header{
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    font-weight: 500;
+    a{
+        font-weight: 700;
+    }
+    .navbar-brand{
+        a{
+            padding-top: 0;
+            padding-bottom: 0;
+            font-weight: 900;
+            line-height: $headerHeight;
+        }
+    }
+    .navbar-end{
+        .navbar-item{
+            padding-top: 0;
+            padding-bottom: 0;
+            .buttons{
+                .button{
+                    background: transparent;
+                }
+            }
+        }
+    }
+}

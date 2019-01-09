@@ -38,6 +38,11 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem "haml-rails", "~> 1.0"
 gem 'devise'
+gem 'mysql2', "~> 0.4.10"
+gem 'figaro'
+
+gem 'rails-assets-bulma', source: 'https://rails-assets.org'
+gem "font-awesome-rails"
 
 
 group :development, :test do
